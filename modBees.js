@@ -1,7 +1,17 @@
-G.AddData({
+/*G.AddData({
 name:'Bee mod',
 author:'Shadowclaimer',
 desc:'A basic mod that adds Honeycomb and Bees.',
+engineVersion:1,
+manifest:'modManifest.js',
+requires:['Default dataset*'],
+sheets:{'spicySheet':'img/spicyModIconSheet.png'},//custom stylesheet (note : broken in IE and Edge for the time being)
+func:function() */
+	
+G.AddData({
+name:'Example mod',
+author:'Orteil',
+desc:'A simple example mod that adds hot peppers and hot sauce.',
 engineVersion:1,
 manifest:'modManifest.js',
 requires:['Default dataset*'],
