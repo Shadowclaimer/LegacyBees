@@ -1,10 +1,13 @@
-//v1.2
+//v1.3
+//1.3 Changed Manifest from modManifest.js
+//1.2 Fixed Bracket
+//1.1 Fixed Bracket
 G.AddData({
 name:'Bee mod',
 author:'Shadowclaimer',
 desc:'A basic mod that adds Honeycomb and Bees.',
 engineVersion:1,
-manifest:'modManifest.js',
+manifest:'beeManifest.js',
 requires:['Default dataset*'],
 sheets:{'spicySheet':'img/spicyModIconSheet.png'},//custom stylesheet (note : broken in IE and Edge for the time being)
 func:function()
