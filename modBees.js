@@ -1,4 +1,5 @@
-//v1.6
+//v1.7
+//1.7 Nerfed honeycomb generation and bee generation
 //1.6 Changed imgur link to 48x48 icons instead of 15x15
 //1.5 Nerfed Honeycomb generation
 //1.4 Added Honeysheet and linked to imgur link
@@ -44,14 +45,14 @@ func:function()
 	
 	//Then we augment the base data to incorporate our new resources :
 		//adding honeycomb and bees as something that can be gathered from grass
-	G.getDict('grass').res['gather']['honeycomb']=0.5;
+	G.getDict('grass').res['gather']['honeycomb']=0.1;
 		//adding a new mode to artisans so they can make honeycomb from wild bees
 	G.getDict('artisan').modes['honeycomb']={name:'Make honeycomb',desc:'Use wild bees to gather honeycomb.',req:{'beekeeping':true},use:{'knapped tools':1}};
 		//adding a new effect to artisans that handles the actual honeycomb creation and is only active when 'make honeycomb' is active.
 	//G.getDict('artisan').effects.push({type:'convert',from:{'hot pepper':3,'bees':3},into:{'hot sauce':1},every:3,mode:'hot sauce'});
-	G.getDict('artisan').effects.push({type:'convert',from:{'bees':1},into:{'honeycomb':3},every:3,mode:'honeycomb'});
+	G.getDict('artisan').effects.push({type:'convert',from:{'bees':1},into:{'honeycomb':3},every:5,mode:'honeycomb'});
 	//beekeeping makes gatherers find bees
-	G.getDict('gatherer').effects.push({type:'gather',context:'gather',what:{'bees':1},amount:1,max:1,req:{'beekeeping':true}});           
+	G.getDict('gatherer').effects.push({type:'gather',context:'gather',what:{'bees':0.05},amount:1,max:1,req:{'beekeeping':true}});           
 	//Then we add a new technology which is required by the artisans to gain access to the "hot sauce" mode :
 	new G.Tech({
 		name:'beekeeping',
