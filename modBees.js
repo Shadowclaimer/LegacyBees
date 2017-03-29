@@ -1,4 +1,5 @@
-//v1.4
+//v1.5
+//1.5 Nerfed Honeycomb generation
 //1.4 Added Honeysheet and linked to imgur link
 //1.3 Changed Manifest from modManifest.js
 //1.2 Fixed Bracket
@@ -42,7 +43,7 @@ func:function()
 	
 	//Then we augment the base data to incorporate our new resources :
 		//adding honeycomb and bees as something that can be gathered from grass
-	G.getDict('grass').res['gather']['honeycomb']=5;
+	G.getDict('grass').res['gather']['honeycomb']=0.5;
 		//adding a new mode to artisans so they can make honeycomb from wild bees
 	G.getDict('artisan').modes['honeycomb']={name:'Make honeycomb',desc:'Use wild bees to gather honeycomb.',req:{'beekeeping':true},use:{'knapped tools':1}};
 		//adding a new effect to artisans that handles the actual honeycomb creation and is only active when 'make honeycomb' is active.
