@@ -1,3 +1,4 @@
+//v1.1
 G.AddData({
 name:'Bee mod',
 author:'Shadowclaimer',
