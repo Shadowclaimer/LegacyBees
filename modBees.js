@@ -1,4 +1,4 @@
-/*G.AddData({
+G.AddData({
 name:'Bee mod',
 author:'Shadowclaimer',
 desc:'A basic mod that adds Honeycomb and Bees.',
@@ -6,22 +6,12 @@ engineVersion:1,
 manifest:'modManifest.js',
 requires:['Default dataset*'],
 sheets:{'spicySheet':'img/spicyModIconSheet.png'},//custom stylesheet (note : broken in IE and Edge for the time being)
-func:function() */
-	
-G.AddData({
-name:'Example mod',
-author:'Orteil',
-desc:'A simple example mod that adds hot peppers and hot sauce.',
-engineVersion:1,
-manifest:'modManifest.js',
-requires:['Default dataset*'],
-sheets:{'spicySheet':'http://i.imgur.com/1rWrl9F.png'},//custom stylesheet (note : broken in IE and Edge for the time being)
 func:function()
 {
 	//Test mod to add honeycomb.bees/honey/mead
 	
 	//First we add the new resources (honeycomb, bees, and honey)
-	/*new G.Res({
+	new G.Res({
 		name:'honeycomb',
 		desc:'[honeycomb]s are extremely sweet treats, but well guarded by wild [bees].',
 		icon:[0,0,'spicySheet'],
@@ -74,7 +64,7 @@ func:function()
 	//	effects:[
 	//		{type:'function',func:function(){G.getDict('hot sauce').turnToByContext['eat']['happiness']=0.2;}},//this is a custom function executed when we gain the trait
 	//	],
-	*///});
+	//});
 	
 	//There are many other ways of adding and changing content; refer to /data.js, the default dataset, if you want to see how everything is done in the base game. Good luck!
 }
