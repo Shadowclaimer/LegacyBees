@@ -1,4 +1,5 @@
-//v1.5
+//v1.6
+//1.6 Changed imgur link to 48x48 icons instead of 15x15
 //1.5 Nerfed Honeycomb generation
 //1.4 Added Honeysheet and linked to imgur link
 //1.3 Changed Manifest from modManifest.js
@@ -11,7 +12,7 @@ desc:'A basic mod that adds Honeycomb and Bees.',
 engineVersion:1,
 manifest:'beeManifest.js',
 requires:['Default dataset*'],
-sheets:{'honeySheet':'http://i.imgur.com/1yrOBaq.png'},//custom stylesheet (note : broken in IE and Edge for the time being)
+sheets:{'honeySheet':'http://i.imgur.com/rAbqDCw.png'},//custom stylesheet (note : broken in IE and Edge for the time being)
 func:function()
 {
 	//Test mod to add honeycomb.bees/honey/mead
