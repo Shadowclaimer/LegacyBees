@@ -1,4 +1,4 @@
-//v1.1
+//v1.2
 G.AddData({
 name:'Bee mod',
 author:'Shadowclaimer',
@@ -45,7 +45,7 @@ func:function()
 	//G.getDict('artisan').effects.push({type:'convert',from:{'hot pepper':3,'bees':3},into:{'hot sauce':1},every:3,mode:'hot sauce'});
 	G.getDict('artisan').effects.push({type:'convert',from:{'bees':1},into:{'honeycomb':3},every:3,mode:'honeycomb'});
 	//beekeeping makes gatherers find bees
-	G.getDict('gatherer').effects.push({type:'gather',context:'gather',what:{'bees':1},amount:1,max:1,req:{'beekeeping':true});           
+	G.getDict('gatherer').effects.push({type:'gather',context:'gather',what:{'bees':1},amount:1,max:1,req:{'beekeeping':true}});           
 	//Then we add a new technology which is required by the artisans to gain access to the "hot sauce" mode :
 	new G.Tech({
 		name:'beekeeping',
