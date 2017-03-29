@@ -15,7 +15,7 @@ desc:'A simple example mod that adds hot peppers and hot sauce.',
 engineVersion:1,
 manifest:'modManifest.js',
 requires:['Default dataset*'],
-sheets:{'spicySheet':'img/spicyModIconSheet.png'},//custom stylesheet (note : broken in IE and Edge for the time being)
+sheets:{'spicySheet':'http://i.imgur.com/1rWrl9F.png'},//custom stylesheet (note : broken in IE and Edge for the time being)
 func:function()
 {
 	//Test mod to add honeycomb.bees/honey/mead
