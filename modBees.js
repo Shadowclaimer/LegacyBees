@@ -1,4 +1,5 @@
-//v1.3
+//v1.4
+//1.4 Added Honeysheet and linked to imgur link
 //1.3 Changed Manifest from modManifest.js
 //1.2 Fixed Bracket
 //1.1 Fixed Bracket
@@ -9,7 +10,7 @@ desc:'A basic mod that adds Honeycomb and Bees.',
 engineVersion:1,
 manifest:'beeManifest.js',
 requires:['Default dataset*'],
-sheets:{'spicySheet':'img/spicyModIconSheet.png'},//custom stylesheet (note : broken in IE and Edge for the time being)
+sheets:{'honeySheet':'http://i.imgur.com/1yrOBaq.png'},//custom stylesheet (note : broken in IE and Edge for the time being)
 func:function()
 {
 	//Test mod to add honeycomb.bees/honey/mead
@@ -18,7 +19,7 @@ func:function()
 	new G.Res({
 		name:'honeycomb',
 		desc:'[honeycomb]s are extremely sweet treats, but well guarded by wild [bees].',
-		icon:[0,0,'spicySheet'],
+		icon:[0,0,'honeySheet'],
 		turnToByContext:{'eat':{'health':0.01,'happiness':0.03},'decay':{'spoiled food':0.5}},//this basically translates to : "when eaten, generate some health and happiness; when rotting, turn into either nothing or some spoiled food"
 		partOf:'food',
 		category:'food',
@@ -26,14 +27,14 @@ func:function()
 	new G.Res({
 		name:'bees',
 		desc:'[bees] are stinging insects, bee-ware!',
-		icon:[0,1,'spicySheet'],
+		icon:[0,1,'honeySheet'],
 		partOf:'misc materials',
 		category:'misc',
 	});
 	new G.Res({
 		name:'honey',
 		desc:'Little bees will produce the sweetest honey when well taken care of.',
-		icon:[1,0,'spicySheet'],
+		icon:[1,0,'honeySheet'],
 		turnToByContext:{'eat':{'health':0.03,'happiness':0.1},'decay':{'honey':0.95,'spoiled food':0.05}},//that last part makes hot sauce effectively have a 95% chance of simply not rotting (in effect, it decays into itself)
 		partOf:'food',
 		category:'food',
@@ -53,7 +54,7 @@ func:function()
 	new G.Tech({
 		name:'beekeeping',
 		desc:'@[gatherer]s can find bees@[artisan]s can now produce [honeycomb] from [bees]//With a lot of work, wild bees can be tamed to generate honeycomb for our use.',
-		icon:[0,1,'spicySheet'],
+		icon:[0,1,'honeySheet'],
 		cost:{'insight':10},
 		req:{'cooking':true},
 	});
