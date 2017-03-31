@@ -1,4 +1,5 @@
-//v1.7
+//v1.8
+//1.8 Trying another Spritesheet
 //1.7 Nerfed honeycomb generation and bee generation
 //1.6 Changed imgur link to 48x48 icons instead of 15x15
 //1.5 Nerfed Honeycomb generation
@@ -13,7 +14,7 @@ desc:'A basic mod that adds Honeycomb and Bees.',
 engineVersion:1,
 manifest:'beeManifest.js',
 requires:['Default dataset*'],
-sheets:{'honeySheet':'http://i.imgur.com/rAbqDCw.png'},//custom stylesheet (note : broken in IE and Edge for the time being)
+sheets:{'honeySheet':'http://i.imgur.com/bhNRZSv.png'},//custom stylesheet (note : broken in IE and Edge for the time being)
 func:function()
 {
 	//Test mod to add honeycomb.bees/honey/mead
@@ -22,7 +23,7 @@ func:function()
 	new G.Res({
 		name:'honeycomb',
 		desc:'[honeycomb]s are extremely sweet treats, but well guarded by wild [bees].',
-		icon:[0,0,'honeySheet'],
+		icon:[1,0,'honeySheet'],
 		turnToByContext:{'eat':{'health':0.01,'happiness':0.03},'decay':{'spoiled food':0.5}},//this basically translates to : "when eaten, generate some health and happiness; when rotting, turn into either nothing or some spoiled food"
 		partOf:'food',
 		category:'food',
@@ -30,7 +31,7 @@ func:function()
 	new G.Res({
 		name:'bees',
 		desc:'[bees] are stinging insects, bee-ware!',
-		icon:[0,1,'honeySheet'],
+		icon:[1,0,'honeySheet'],
 		partOf:'misc materials',
 		category:'misc',
 	});
